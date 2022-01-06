@@ -40,7 +40,7 @@ const Acccessories = () => {
     }
     const { filterRef, showHideFilter} = useFadeModal();
     return (
-        <Helmet title="Sản phẩm">
+        <Helmet title="Phụ kiện">
             <div className="catalog">
                 <div className="catalog__filter" ref={filterRef}>
                     <div className="catalog__filter__close" onClick={() => showHideFilter()}>
