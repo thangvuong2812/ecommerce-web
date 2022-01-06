@@ -6,19 +6,19 @@ import logo from '../assets/images/LogoVCT2.png'
 const mainNav = [
     {
         display: "Trang Chủ",
-        path: "/"
+        path: "/ecommerce-web/"
     },
     {
         display: "Sản phẩm",
-        path: "/catalog"
+        path: "/ecommerce-web/catalog"
     },
     {
         display: "Phụ kiện",
-        path: "/accessories"
+        path: "/ecommerce-web/accessories"
     },
     {
         display: "Liên hệ",
-        path: "/contact"
+        path: "/ecommerce-web/contact"
     }
 ]
 
@@ -52,7 +52,7 @@ const Header = () => {
         <div className="header" ref={headerRef}>
             <div className="container">
                 <div className="header__logo">
-                    <Link to="/">
+                    <Link to="/ecommerce-web">
                         <img src={logo} alt="Main logo website" />
                     </Link>
                 </div>
@@ -82,7 +82,7 @@ const Header = () => {
                             <i className="bx bx-search"></i>
                         </div>
                         <div className="header__menu__item header__menu__right__item">
-                            <Link to="/cart">
+                            <Link to="/ecommerce-web/cart">
                                 <i className="bx bx-shopping-bag"></i>
                                 {totalProduct === 0 ? null : <span className="bg-red ">{totalProduct}</span>}
                             </Link>

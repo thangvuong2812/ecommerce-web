@@ -12,12 +12,12 @@ import Contact from '../pages/Contact';
 function MyRoutes() {
     return (
         <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/catalog/:slug" component={Product} />
-            <Route path="/catalog" component={Catalog} />
-            <Route path="/cart" component={Cart} />
-            <Route path="/accessories" component={Acccessories} />
-            <Route path="/contact" component={Contact} />
+            <Route path="/ecommerce-web/" exact component={Home} />
+            <Route path="/ecommerce-web/catalog/:slug" component={Product} />
+            <Route path="/ecommerce-web/catalog" component={Catalog} />
+            <Route path="/ecommerce-web/cart" component={Cart} />
+            <Route path="/ecommerce-web/accessories" component={Acccessories} />
+            <Route path="/ecommerce-web/contact" component={Contact} />
         </Switch>
     )
 }

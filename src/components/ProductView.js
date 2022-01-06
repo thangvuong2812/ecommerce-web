@@ -81,7 +81,7 @@ const ProductView = props => {
                 price: product.price
             }));
             dispatch(remove());
-            props.history.push('/cart');
+            props.history.push('/ecommerce-web/cart');
         }
     }
     const desRef = useRef()
