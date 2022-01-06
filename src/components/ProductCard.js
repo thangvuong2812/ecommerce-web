@@ -18,7 +18,7 @@ const ProductCard = props => {
     const dispatch = useDispatch()
     return (
         <div className="product-card">
-            <Link to={`/catalog/${props.slug}`}>
+            <Link to={`/ecommerce-web/catalog/${props.slug}`}>
                 <div className={`product-card__image ${!isAccessories ? 'untransition': ''}`}>
                     <img src={props.img01} alt=""/>
                     <img src={props.img02} alt=""/>

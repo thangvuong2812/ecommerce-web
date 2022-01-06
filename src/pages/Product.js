@@ -7,7 +7,6 @@ import ProductCard from '../components/ProductCard';
 import ProductView from '../components/ProductView';
 import accessoryData from '../assets/fake-data/accessories';
 function Product(props) {
-
     const product = productData.getProductBySlug(props.match.params.slug);
     const accessories = accessoryData.getAccessoryBySlug(props.match.params.slug);
     const data = product === undefined ? accessories : product;
