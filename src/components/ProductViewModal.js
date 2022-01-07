@@ -9,7 +9,6 @@ import Button from './Button'
 
 import { remove } from '../redux/product-modal/productModalSlice'
 
-// import { useFadeModal } from '../customHook/useFadeModal'
 const ProductViewModal = props => {
     const productSlug = useSelector((state) => state.productModal.value);
     
@@ -53,8 +52,5 @@ const ProductViewModal = props => {
     )
 }
 
-ProductViewModal.propTypes = {
-
-}
 
 export default ProductViewModal

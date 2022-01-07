@@ -16,7 +16,7 @@ function Product(props) {
     const relatedAccessories = accessoryData.getAccessories(8);
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [product])
+    }, [data])
     return (
         <Helmet title={data.title}>
             <Section>

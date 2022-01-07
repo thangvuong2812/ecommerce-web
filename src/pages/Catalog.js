@@ -8,7 +8,7 @@ import CheckBox from '../components/CheckBox'
 
 import Helmet from '../components/Helmet'
 import InfinityList from '../components/InfinityList'
-import { useFadeModal } from '../customHook/useFadeModal'
+import { useFadeModal } from '../customHook/customhook'
 
 function Catalog(props) {
 

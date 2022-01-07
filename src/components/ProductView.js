@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux'
 import { NotificationManager } from 'react-notifications'
 import categoryAccess from '../assets/fake-data/category-access'
 import { remove } from '../redux/product-modal/productModalSlice';
+import { usePrevious } from '../customHook/customhook';
 const ProductView = props => {
     let product = props.product;
 
@@ -28,9 +29,9 @@ const ProductView = props => {
     const [quantity, setQuantity] = useState(1);
 
     const [isShowBtn, setIsShowBtn] = useState(true);
+    const [isShowBtnMB, setIsShowBtnMB] = useState(true);
 
     const dispatch = useDispatch();
-
     const updateQuantity = (type) => {
         if (type === 'plus') {
             setQuantity(quantity + 1);
@@ -43,6 +44,7 @@ const ProductView = props => {
         setQuantity(1);
         setColor(undefined);
         setSize(undefined);
+        setDesExpand(false);
     }, [product])
 
     const check = () => {
@@ -84,30 +86,44 @@ const ProductView = props => {
             props.history.push('/ecommerce-web/cart');
         }
     }
-    const desRef = useRef()
-    const titleRef = useRef()
-    const contentRef = useRef()
-    const mobileDesRef = useRef()
-    const mobileTitleRef = useRef()
-    const mobileContentRef = useRef()
-    useEffect(() => {
-        const heightDes = desRef.current.clientHeight;
-        if (titleRef.current.clientHeight + contentRef.current.clientHeight < heightDes) {
-            desRef.current.style.height = 'max-content';
-            setIsShowBtn(false);
-        }
-       
-    }, [desRef, titleRef, contentRef])
 
+    const desRef = useRef(null)
+    const titleRef = useRef(null)
+    const contentRef = useRef(null)
+    const mobileDesRef = useRef(null)
+    const mobileTitleRef = useRef(null)
+    const mobileContentRef = useRef(null)
+    const prevAmount = usePrevious(props.product);
+ 
     useEffect(() => {
-        const heightMobileDes = mobileDesRef.current.clientHeight;
-        if (mobileDesRef.current) {
-            if(mobileTitleRef.current.clientHeight + mobileContentRef.current.clientHeight < heightMobileDes) {
-                mobileDesRef.current.style.height = 'max-content';
-                setIsShowBtn(false)
+        if (props.product !== prevAmount) {
+            if (desRef.current) {
+                if (titleRef.current.clientHeight + contentRef.current.clientHeight < 400) {   
+                    desRef.current.setAttribute("style", "height: max-content;");
+                    setIsShowBtn(false);
+                } else {
+                    desRef.current.removeAttribute('style');
+                    setIsShowBtn(true);
+                }
             }
         }
-    }, [mobileDesRef,mobileTitleRef,mobileContentRef])
+    }, [desRef, titleRef, contentRef, prevAmount, props.product])
+
+    useEffect(() => {
+        if (props.product !== prevAmount) {
+            if (mobileDesRef.current) {
+                const heightMobileTitle = mobileTitleRef.current.clientHeight;
+                const heightMobileContent = mobileContentRef.current.clientHeight;
+                if (heightMobileTitle + heightMobileContent < 250) {
+                    mobileDesRef.current.setAttribute("style", "height: max-content;");
+                    setIsShowBtnMB(false);
+                } else {
+                    mobileDesRef.current.removeAttribute('style');
+                    setIsShowBtnMB(true);
+                }
+            } 
+        }
+    }, [mobileDesRef, mobileTitleRef, mobileContentRef, props.product, prevAmount])
     return (
         <div className="product">
             <div className="product__images">
@@ -210,7 +226,7 @@ const ProductView = props => {
                 </div>
                 <div className="product-description__content" dangerouslySetInnerHTML={{ __html: product.description }} ref={mobileContentRef}></div>
                 {
-                    isShowBtn === true ? <div className="product-description__toggle">
+                    isShowBtnMB === true ? <div className="product-description__toggle">
                         <Button size="sm" onClick={() => setDesExpand(!desExpand)}>
                             {
                                 desExpand ? 'Thu gọn' : 'Xem thêm'
