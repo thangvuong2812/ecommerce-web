@@ -30,6 +30,7 @@ function Home() {
                             policy.map((item, index) => (
                                 <Link to="/policy" key={index}>
                                     <PolicyCard
+                                        delay={index*100}
                                         name={item.name}
                                         description={item.description}
                                         icon={item.icon}
@@ -57,6 +58,7 @@ function Home() {
                         {
                             productData.getProducts(4).map((item, index) => (
                                 <ProductCard
+                                    delay={index*100}
                                     key={index}
                                     img01={item.image01}
                                     img02={item.image02}
@@ -86,6 +88,7 @@ function Home() {
                         {
                             productData.getProducts(8).map((item, index) => (
                                 <ProductCard
+                                    delay={index*100}
                                     key={index}
                                     img01={item.image01}
                                     img02={item.image02}
@@ -126,6 +129,7 @@ function Home() {
                         {
                             productData.getProducts(12).map((item, index) => (
                                 <ProductCard
+                                    delay={index*100}
                                     key={index}
                                     img01={item.image01}
                                     img02={item.image02}

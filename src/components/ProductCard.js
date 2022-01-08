@@ -7,7 +7,8 @@ import { set } from '../redux/product-modal/productModalSlice'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { checkSlug } from '../assets/fake-data/getCartItem'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 const ProductCard = props => {
     const [isAccessories, setIsAccessories] = useState(true)
     useEffect(() => {
@@ -15,9 +16,12 @@ const ProductCard = props => {
             setIsAccessories(false)
         }
     },[props.slug])
+    useEffect(() => {
+        AOS.init({duration: 1500});
+    })
     const dispatch = useDispatch()
     return (
-        <div className="product-card">
+        <div data-aos="fade-up" data-aos-delay={props.delay} className="product-card">
             <Link to={`/ecommerce-web/catalog/${props.slug}`}>
                 <div className={`product-card__image ${!isAccessories ? 'untransition': ''}`}>
                     <img src={props.img01} alt=""/>

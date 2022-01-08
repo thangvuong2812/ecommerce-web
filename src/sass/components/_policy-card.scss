@@ -29,6 +29,7 @@
         &__description {
             font-size: 1rem;
             color: $txt-second-color;
+            white-space: nowrap;
         }
     }
 }
