@@ -129,7 +129,7 @@ function Home() {
                         {
                             productData.getProducts(12).map((item, index) => (
                                 <ProductCard
-                                    delay={index*100}
+                                    delay={index*50}
                                     key={index}
                                     img01={item.image01}
                                     img02={item.image02}

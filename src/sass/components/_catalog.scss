@@ -6,7 +6,6 @@
     }
     &__filter {
         width: 20%;
-
         @include tablet {
             width: max-content;
             height: 100vh;

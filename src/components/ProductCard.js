@@ -17,8 +17,8 @@ const ProductCard = props => {
         }
     },[props.slug])
     useEffect(() => {
-        AOS.init({duration: 1500});
-    })
+        AOS.init({duration: 1000,});
+    },[]);
     const dispatch = useDispatch()
     return (
         <div data-aos="fade-up" data-aos-delay={props.delay} className="product-card">

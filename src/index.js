@@ -12,9 +12,8 @@ import 'react-notifications/lib/notifications.css';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <NotificationContainer/>
-      <Layout />
       <NotificationContainer />
+      <Layout />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

@@ -7,7 +7,7 @@ const PolicyCard = props => {
         AOS.init({duration: 2000})
     })
     return (
-        <div data-aos="fade-up" data-aos-delay={props.delay} data-aos-once="false">
+        <div data-aos="fade-up" data-aos-delay={props.delay}>
             <div className="policy-card">
                 <div className="policy-card__icon">
                     <i className={props.icon}></i>

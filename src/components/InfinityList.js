@@ -34,7 +34,8 @@ const InfinityList = props => {
         const getItems = () => {
             const pages = Math.floor(props.data.length / perLoad);
             const maxIndex = props.data.length % perLoad === 0 ? pages : pages + 1;
-
+            console.log(maxIndex);
+            console.log("index: " +index);
             if(load && index <= maxIndex) {
                 const start = perLoad * index;
                 const end = start + perLoad;
@@ -43,7 +44,6 @@ const InfinityList = props => {
                 setIndex(index + 1);
             }
         }
-
         getItems();
         setLoad(false);
     }, [load, index, data, props.data]);
@@ -58,6 +58,7 @@ const InfinityList = props => {
                 {
                     data.map((item, index) => (
                         <ProductCard
+                            delay={index*50}
                             key={index}
                             img01={item.image01}
                             img02={item.image02}

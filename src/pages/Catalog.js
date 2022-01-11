@@ -128,7 +128,6 @@ function Catalog(props) {
                             }
                         </div>
                     </div>
-
                     <div className="catalog__filter__widget">
                         <div className="catalog__filter__widget__title">
                             Màu sắc
