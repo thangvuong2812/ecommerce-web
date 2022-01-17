@@ -31,7 +31,7 @@
         transition: background-color 0.3s ease;
         border: 1px solid $main-color;
         color: $txt-white;
-
+        @include flex(center, center);
         > i {
             transform: scale(1);
         }

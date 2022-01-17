@@ -8,6 +8,7 @@ import Cart from '../pages/Cart';
 import Product from '../pages/Product';
 import Acccessories from '../pages/Acccessories';
 import Contact from '../pages/Contact';
+import Login from '../pages/Login';
 
 function MyRoutes() {
     return (
@@ -18,6 +19,7 @@ function MyRoutes() {
             <Route path="/ecommerce-web/cart" component={Cart} />
             <Route path="/ecommerce-web/accessories" component={Acccessories} />
             <Route path="/ecommerce-web/contact" component={Contact} />
+            <Route path="/ecommerce-web/login" component={Login} />
         </Switch>
     )
 }
