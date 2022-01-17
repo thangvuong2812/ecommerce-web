@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/ecommerce-web/static/css/main.7fc4ef7c.chunk.css",
-    "main.js": "/ecommerce-web/static/js/main.85c13a1b.chunk.js",
-    "main.js.map": "/ecommerce-web/static/js/main.85c13a1b.chunk.js.map",
+    "main.css": "/ecommerce-web/static/css/main.1515e5f2.chunk.css",
+    "main.js": "/ecommerce-web/static/js/main.5d256df3.chunk.js",
+    "main.js.map": "/ecommerce-web/static/js/main.5d256df3.chunk.js.map",
     "runtime-main.js": "/ecommerce-web/static/js/runtime-main.7ea23efc.js",
     "runtime-main.js.map": "/ecommerce-web/static/js/runtime-main.7ea23efc.js.map",
     "static/css/2.23698c16.chunk.css": "/ecommerce-web/static/css/2.23698c16.chunk.css",
-    "static/js/2.4aa7a954.chunk.js": "/ecommerce-web/static/js/2.4aa7a954.chunk.js",
-    "static/js/2.4aa7a954.chunk.js.map": "/ecommerce-web/static/js/2.4aa7a954.chunk.js.map",
+    "static/js/2.afccbe6c.chunk.js": "/ecommerce-web/static/js/2.afccbe6c.chunk.js",
+    "static/js/2.afccbe6c.chunk.js.map": "/ecommerce-web/static/js/2.afccbe6c.chunk.js.map",
     "static/js/3.04388727.chunk.js": "/ecommerce-web/static/js/3.04388727.chunk.js",
     "static/js/3.04388727.chunk.js.map": "/ecommerce-web/static/js/3.04388727.chunk.js.map",
     "index.html": "/ecommerce-web/index.html",
     "static/css/2.23698c16.chunk.css.map": "/ecommerce-web/static/css/2.23698c16.chunk.css.map",
-    "static/css/main.7fc4ef7c.chunk.css.map": "/ecommerce-web/static/css/main.7fc4ef7c.chunk.css.map",
-    "static/js/2.4aa7a954.chunk.js.LICENSE.txt": "/ecommerce-web/static/js/2.4aa7a954.chunk.js.LICENSE.txt",
+    "static/css/main.1515e5f2.chunk.css.map": "/ecommerce-web/static/css/main.1515e5f2.chunk.css.map",
+    "static/js/2.afccbe6c.chunk.js.LICENSE.txt": "/ecommerce-web/static/js/2.afccbe6c.chunk.js.LICENSE.txt",
     "static/media/LogoVCT2.a24fcd4d.png": "/ecommerce-web/static/media/LogoVCT2.a24fcd4d.png",
     "static/media/accessory-01(1).jpg": "/ecommerce-web/static/media/accessory-01(1).ea819f31.jpg",
     "static/media/accessory-02(1).jpg": "/ecommerce-web/static/media/accessory-02(1).46b97801.jpg",
@@ -33,6 +33,7 @@
     "static/media/accessory-16(1).jpg": "/ecommerce-web/static/media/accessory-16(1).6418dfcb.jpg",
     "static/media/banner.3c5f3ab8.png": "/ecommerce-web/static/media/banner.3c5f3ab8.png",
     "static/media/boxicons.min.css": "/ecommerce-web/static/media/boxicons.cbd149c5.ttf",
+    "static/media/login-img.c32d0b18.svg": "/ecommerce-web/static/media/login-img.c32d0b18.svg",
     "static/media/noitem.6763f4d8.gif": "/ecommerce-web/static/media/noitem.6763f4d8.gif",
     "static/media/notifications.css": "/ecommerce-web/static/media/notification.c5d9251e.ttf",
     "static/media/product-01 (1).jpg": "/ecommerce-web/static/media/product-01 (1).7badc1d8.jpg",
@@ -66,8 +67,8 @@
   "entrypoints": [
     "static/js/runtime-main.7ea23efc.js",
     "static/css/2.23698c16.chunk.css",
-    "static/js/2.4aa7a954.chunk.js",
-    "static/css/main.7fc4ef7c.chunk.css",
-    "static/js/main.85c13a1b.chunk.js"
+    "static/js/2.afccbe6c.chunk.js",
+    "static/css/main.1515e5f2.chunk.css",
+    "static/js/main.5d256df3.chunk.js"
   ]
 }
